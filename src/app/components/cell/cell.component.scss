@@ -1,0 +1,24 @@
+.cell-container {
+    margin: 0px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0px;
+}
+
+.dead {
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.9);
+    border-radius: 0px;
+}
+
+.healthy1 {
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.9);
+    border-radius: 0px;
+}
+
+.healthy2 {
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.9);
+    border-radius: 0px;
+}

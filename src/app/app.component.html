@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to the Game of Life Simulator!
+  </h1>
+</div>
+<div class="page-container">
+  <mat-card>
+    <form class="filter-container">
+      <div class="button-container">
+        <button mat-flat-button color="primary" (click)="onSimulate()" [disabled]="startDisabled">Simulate</button>
+        <button mat-flat-button color="primary" (click)="onStop()" [disabled]="stopDisabled">Stop</button>
+      </div>
+      <span class="spacer">
+        Iteration: {{ iteration }}
+      </span>
+      <mat-form-field>
+        <mat-select name="seed" placeholder="Pick a seed" [(ngModel)]="selectedSeed">
+          <mat-option *ngFor="let seed of seeds" [value]="seed">
+            {{ seed.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card>
+  <app-cell-grid [cellGrid]="cellGrid"></app-cell-grid>
+</div>
+<router-outlet></router-outlet>
